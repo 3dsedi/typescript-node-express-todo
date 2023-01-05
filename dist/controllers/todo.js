@@ -2,7 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteTodos = exports.updateTodos = exports.getTodos = exports.createTodo = void 0;
 const todo_1 = require("../models/todo");
-const Todos = [];
+const Todos = [
+    { id: '123', text: 'finish typescript course' },
+    { id: '124', text: 'finish typescript + node.js course' },
+    { id: '125', text: 'finish typescript + node.js + express course' },
+    { id: '126', text: 'push to girhub' }
+];
 const createTodo = (req, res, next) => {
     const text = req.body.text;
     const newTodo = new todo_1.Todo(Date.now().toString(), text);
