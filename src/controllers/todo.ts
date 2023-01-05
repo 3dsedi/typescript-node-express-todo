@@ -1,7 +1,12 @@
 import { RequestHandler } from "express";
 import { Todo } from "../models/todo";
 
-const Todos: Todo[] = [];
+const Todos: Todo[] = [
+  {id: '123', text: 'finish typescript course'},
+  {id: '124', text: 'finish typescript + node.js course'},
+  {id: '125', text: 'finish typescript + node.js + express course'},
+  {id: '126', text: 'push to girhub'}
+];
 
 export const createTodo: RequestHandler = (req, res, next) => {
   const text = (req.body as { text: string }).text;
